@@ -1,0 +1,31 @@
+<table class="">
+
+    <thead>
+        <tr>
+            <td>
+                <a href="#" ng-click="$ctrl.sortType = 'name'; $ctrl.sortReverse = !$ctrl.sortReverse">
+            Задача
+            <span ng-show="$ctrl.sortType == 'name' && !$ctrl.sortReverse" class="">&#9652;</span>
+            <span ng-show="$ctrl.sortType == 'name' && $ctrl.sortReverse" class="">&#9660;</span>
+          </a>
+            </td>
+            <td>
+                <a href="# " ng-click="$ctrl.sortType = 'time'; $ctrl.sortReverse = !$ctrl.sortReverse">
+        Время
+            <span ng-show="$ctrl.sortType == 'time' && !$ctrl.sortReverse" class="">&#9652;</span>
+            <span ng-show="$ctrl.sortType == 'time' && $ctrl.sortReverse" class="">&#9660;</span>
+          </a>
+            </td>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="t in $ctrl.tasks | orderBy:$ctrl.sortType:$ctrl.sortReverse">
+            <td>{{ t.name }}</td>
+            <td>{{ t.time }}</td>
+
+        </tr>
+    </tbody>
+
+</table>

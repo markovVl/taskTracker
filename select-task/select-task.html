@@ -1,0 +1,22 @@
+
+
+<p ng-if="$ctrl.selectedTask">{{ $ctrl.selectedTask.body }}</p>
+<p ng-if="!$ctrl.selectedTask">Текст задания</p>
+   </div>
+   
+       <md-input-container style="margin-right: 10px;">
+         <label>Проект</label>
+         <md-select ng-model="$ctrl.selectedProject" ng-change="$ctrl.update();">
+     <md-optgroup label="Проекты">
+       <md-option ng-value="item.id" ng-repeat="item in $ctrl.projects"> {{item.name}}</md-option>
+     </md-optgroup>
+   </md-select>
+       </md-input-container>
+       <md-input-container>
+         <label>Задача</label>
+         <md-select ng-model="$ctrl.selectedTask">
+          <md-optgroup label="Задачи">
+            <md-option ng-value="item" ng-repeat="item in $ctrl.tasks | filter : {project_id:  $ctrl.selectedProject }: true"> {{item.name}}</md-option>
+          </md-optgroup>
+        </md-select>
+       </md-input-container>

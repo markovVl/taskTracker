@@ -1,0 +1,13 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="timer.js"></script>
+</head>
+<body>
+<div ng-controller="AlbumCtrl">
+{{counter|formatTimer}}
+    <button ng-click="takeAction()">{{buttonText}}</button>    
+</div>
+</body>
+</html>

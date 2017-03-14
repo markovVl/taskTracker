@@ -1,0 +1,44 @@
+<html ng-app="App" ng-cloak lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="app.module.js"></script>
+    <script src="project-list/project-list.module.js"></script>
+    <script src="task-list/task-list.module.js"></script>
+    <script src="select-task/select-task.module.js"></script>
+    <script src="timer/timer.module.js"></script>
+    <script src="project-list/project-list.component.js"></script>
+    <script src="timer/timer.component.js"></script>
+    <script src="task-list/task-list.component.js"></script>
+    <script src="select-task/select-task.component.js"></script>
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <md-toolbar>
+        <timer></timer>
+    </md-toolbar>
+    <select-task></select-task>
+    <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="List By Project">
+            <md-content class="md-padding">
+                <project-list></project-list>
+            </md-content>
+        </md-tab>
+        <md-tab label="List By Task">
+            <md-content class="md-padding">
+                <task-list></task-list>
+
+            </md-content>
+        </md-tab>
+    </md-tabs>
+</body>
+
+</html>

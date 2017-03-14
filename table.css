@@ -1,0 +1,23 @@
+table {
+  width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+      padding: .5em;
+}
+
+thead {
+  background-color: #cccccc;
+}
+
+td a {
+  text-decoration: none;
+  color: black;
+
+}
